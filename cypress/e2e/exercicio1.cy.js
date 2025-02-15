@@ -26,11 +26,10 @@ describe('Exercicio 1 cypress Alura', () => {
         //Visite a página de /home do Adopet;
         cy.visit('https://adopet-tau.vercel.app/home').url().should('eq', 'https://adopet-tau.vercel.app/home');
         //Visite a página de /home do AdoPet e clique no botão “Falar com o responsável”.
-        cy.contains('.card h4', 'Sirius') // Encontra o card pelo nome
-            .parents('.card') // Sobe para o elemento pai (o próprio card)
-            .find('.card__contact') // Busca o botão dentro desse card
-            .click(); // Clica no botão
-
+        cy.contains('.card h4', 'Sirius') 
+            .parents('.card') 
+            .find('.card__contact') 
+            .click(); 
     })
 });
 
